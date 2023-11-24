@@ -1,0 +1,61 @@
+﻿@model Petshop1.Models.Servico
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Servico</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idServico" />
+            <div class="form-group">
+                <label asp-for="idCliente" class="control-label"></label>
+                <select asp-for="idCliente" class="form-control" asp-items="ViewBag.idCliente"></select>
+                <span asp-validation-for="idCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idAnimal" class="control-label"></label>
+                <select asp-for="idAnimal" class="form-control" asp-items="ViewBag.idAnimal"></select>
+                <span asp-validation-for="idAnimal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idTipoServico" class="control-label"></label>
+                <select asp-for="idTipoServico" class="form-control" asp-items="ViewBag.idTipoServico"></select>
+                <span asp-validation-for="idTipoServico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="horario" class="control-label"></label>
+                <input asp-for="horario" class="form-control" />
+                <span asp-validation-for="horario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="data" class="control-label"></label>
+                <input asp-for="data" class="form-control" />
+                <span asp-validation-for="data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="valorTotal" class="control-label"></label>
+                <input asp-for="valorTotal" class="form-control" />
+                <span asp-validation-for="valorTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="qtde" class="control-label"></label>
+                <input asp-for="qtde" class="form-control" />
+                <span asp-validation-for="qtde" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
